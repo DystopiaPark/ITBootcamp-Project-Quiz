@@ -161,4 +161,5 @@ let resetBtn = document.getElementById("reset-btn");
 
 resetBtn.addEventListener("click", () => {
   location.reload();
+  window.scrollTo(0, 0);
 });
