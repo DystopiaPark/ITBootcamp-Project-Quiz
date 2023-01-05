@@ -56,6 +56,7 @@ div {
   max-width: 600px;
   background-color: var(--clr-grey-3);
   font-size: 1.15rem;
+  color: var(--clr-white);
 }
 
 button {
@@ -65,10 +66,10 @@ button {
   cursor: pointer;
   background-color: var(--clr-grey-3);
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--clr-grey-1);
+  font-weight: 550;
+  color: var(--clr-white);
 }
 button:hover {
-  color: var(--clr-grey-3);
-  background-color: var(--clr-grey-1);
+  color: var(--clr-grey-1);
+  background-color: var(--clr-white);
 }

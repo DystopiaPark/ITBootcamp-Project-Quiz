@@ -158,6 +158,7 @@ posaljiBtn.addEventListener("click", () => {
   for (let z = 0; z < allInputRadios.length; z++) {
     allInputRadios[z].disabled = true;
   }
+  window.scrollTo(0, document.body.scrollHeight);
 });
 
 // RESET BTN=======================================================================

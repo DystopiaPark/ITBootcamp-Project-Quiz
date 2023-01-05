@@ -90,6 +90,11 @@ a:visited {
   letter-spacing: 3px;
   font-size: 1.75rem;
   text-transform: uppercase;
+  border-radius: 20px;
+  color: var(--clr-white);
+}
+.box:hover {
+  color: var(--clr-grey-1);
 }
 .header {
   text-align: center;
@@ -181,5 +186,8 @@ Grid Global
   }
   .col-1 {
     display: none;
+  }
+  .box {
+    border-radius: 0px;
   }
 }
