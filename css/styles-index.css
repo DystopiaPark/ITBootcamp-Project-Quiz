@@ -39,7 +39,7 @@ Variables
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --ff-primary: "Lato", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 5s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -67,7 +67,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-primary);
-  background: var(--clr-white);
+  background: var(--clr-grey-7);
   color: var(--clr-grey-1);
   font-size: 0.875rem;
 }
@@ -85,8 +85,8 @@ a:visited {
   height: 300px;
   display: grid;
   place-items: center;
-  background: var(--clr-primary-3);
-  border: 2px solid black;
+  background: var(--clr-grey-3);
+  border: 1px solid blue;
   letter-spacing: 3px;
   font-size: 1.75rem;
   text-transform: uppercase;
@@ -96,21 +96,30 @@ a:visited {
 }
 .header p {
   font-size: 1.2rem;
+  background: var(--clr-grey-3);
+  padding-bottom: 1rem;
 }
 h1 {
   font-size: 2rem;
+  background: var(--clr-grey-3);
+  padding-top: 1rem;
 }
 .header-title {
-  background-color: var(--clr-primary-3);
   color: var(--clr-grey-10);
+  padding: 1rem 0;
 }
 
-.filozofija:hover,
-.film:hover,
-.knjizevnost:hover,
+.filozofija:hover {
+  background: url(/slike/phil.jpg);
+}
+.film:hover {
+  background: url(/slike/film.jpg) center/cover;
+}
+.knjizevnost:hover {
+  background: url(/slike/knjiz.jpg) no-repeat center/cover;
+}
 .muzika:hover {
-  background-color: var(--clr-primary-7);
-  cursor: pointer;
+  background: url(/slike/music.jpg) no-repeat center/cover;
 }
 
 section {
