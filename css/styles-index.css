@@ -105,25 +105,14 @@ h1 {
   color: var(--clr-grey-10);
 }
 
-.filozofija:hover {
-  background-color: var(--clr-primary-7);
-  cursor: pointer;
-}
-
-.film:hover {
-  background-color: var(--clr-primary-7);
-  cursor: pointer;
-}
-
-.knjizevnost:hover {
-  background-color: var(--clr-primary-7);
-  cursor: pointer;
-}
-
+.filozofija:hover,
+.film:hover,
+.knjizevnost:hover,
 .muzika:hover {
   background-color: var(--clr-primary-7);
   cursor: pointer;
 }
+
 section {
   margin: 0;
   padding: 0;
