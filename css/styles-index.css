@@ -76,6 +76,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: var(--clr-grey-1);
 }
 a:visited {
   color: var(--clr-grey-1);
