@@ -1,6 +1,6 @@
 // QUESTION OBJECTS===============================================================
 let pitanje1 = {
-  tekst: "Ko je rezirao film 'Odiseju u svemiru'?",
+  tekst: "Ko je rezirao film '2001: Odiseja u svemiru'?",
   odgovori: [
     "Andrej Tarkovski",
     "Dejvid Linc",
