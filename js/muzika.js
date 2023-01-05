@@ -1,6 +1,6 @@
 // QUESTION OBJECTS===============================================================
 let pitanje1 = {
-  tekst: "Koji je najmanji broj tonova koji moze saciniti akord'?",
+  tekst: "Koji je najmanji broj tonova koji mogu saciniti akord'?",
   odgovori: ["11", "5", "3", "2"],
   indeksOdgovora: 2,
 };

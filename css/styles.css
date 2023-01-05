@@ -46,7 +46,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 body {
-  background: var(--clr-grey-8);
+  background: url(/slike/quiz.jpg) no-repeat center/cover;
 }
 div {
   border: 2px solid blue;
