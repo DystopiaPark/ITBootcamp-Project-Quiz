@@ -37,7 +37,7 @@ let pitanje5 = {
   indeksOdgovora: 2,
 };
 let pitanje6 = {
-  tekst: "Koji filozof je po alegoriji o pecini?",
+  tekst: "Koji filozof je poznat po alegoriji o pecini?",
   odgovori: ["Platon", "Hartman", "Kjerkegor", "Tales"],
   indeksOdgovora: 0,
 };
