@@ -39,7 +39,7 @@ Variables
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --ff-primary: "Lato", sans-serif;
-  --transition: all 5s linear;
+  --transition: all 3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ a:visited {
   color: var(--clr-grey-1);
 }
 .box {
-  height: 300px;
+  height: 200px;
   display: grid;
   place-items: center;
   background: var(--clr-grey-3);
@@ -92,6 +92,7 @@ a:visited {
   text-transform: uppercase;
   border-radius: 20px;
   color: var(--clr-white);
+  transition: var(--transition);
 }
 .box:hover {
   color: var(--clr-grey-1);
@@ -103,11 +104,15 @@ a:visited {
   font-size: 1.2rem;
   background: var(--clr-grey-3);
   padding-bottom: 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 h1 {
   font-size: 2rem;
   background: var(--clr-grey-3);
   padding-top: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .header-title {
   color: var(--clr-grey-10);
@@ -115,7 +120,7 @@ h1 {
 }
 
 .filozofija:hover {
-  background: url(/slike/phil.jpg);
+  background: url(/slike/phil.jpg) no-repeat center/cover;
 }
 .film:hover {
   background: url(/slike/film.jpg) center/cover;
