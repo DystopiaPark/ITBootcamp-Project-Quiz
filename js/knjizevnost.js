@@ -31,8 +31,8 @@ let pitanje4 = {
   indeksOdgovora: 2,
 };
 let pitanje5 = {
-  tekst: "Ko glumi glavnu ulogu u filmu 'Bicentennial Man'?",
-  odgovori: ["Bred Pit", "Robin Vilijams", "Sem Nil", "Patrik Stjuart"],
+  tekst: "Koliko godina samoce je u delu Gabrijela Garsije Markesa'?",
+  odgovori: ["23", "100", "101", "513"],
   indeksOdgovora: 1,
 };
 let pitanje6 = {
