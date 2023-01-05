@@ -3,6 +3,7 @@ div {
   border-radius: 20px;
   margin-bottom: 1rem;
   padding: 1rem 1rem;
+  max-width: 600px;
 }
 
 button {

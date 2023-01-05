@@ -1,3 +1,4 @@
+// QUESTION OBJECTS===============================================================
 let pitanje1 = {
   tekst: "Koji filozof je bio poznat pod nadimkom 'Mračni'?",
   odgovori: ["Pitagora", "Aristotel", "Heraklit", "Platon"],
@@ -26,9 +27,9 @@ let pitanje3 = {
 };
 let pitanje4 = {
   tekst:
-    "Koji stepen je povisen za poluton u lidijskom muzickom modusu u odnosu na jonski:",
-  odgovori: ["sesti", "treci", "sedmi", "cetvrti"],
-  indeksOdgovora: 3,
+    "Ko je napisao knjigu 'Istorijsko krticki uvod u filozofiju mitologije?'",
+  odgovori: ["Dzon Lok", "Spinoza", "Seling", "Hegel"],
+  indeksOdgovora: 2,
 };
 let pitanje5 = {
   tekst: "Koja je notacija disjunkcije u formalnoj logici?",
@@ -36,9 +37,9 @@ let pitanje5 = {
   indeksOdgovora: 2,
 };
 let pitanje6 = {
-  tekst: "Koji je najmanji broj nota koje mogu saciniti akord?",
-  odgovori: ["5", "2", "3", "10"],
-  indeksOdgovora: 2,
+  tekst: "Koji filozof je po alegoriji o pecini?",
+  odgovori: ["Platon", "Hartman", "Kjerkegor", "Tales"],
+  indeksOdgovora: 0,
 };
 let pitanje7 = {
   tekst:
@@ -47,9 +48,9 @@ let pitanje7 = {
   indeksOdgovora: 3,
 };
 let pitanje8 = {
-  tekst: "Koja biljka sadrzi znacajnu kolicinu b12 vitamina?",
-  odgovori: ["Kinoa", "Nijedna", "Tikva", "Indijski orah"],
-  indeksOdgovora: 1,
+  tekst: "Ko je izgovorio 'Drag mi je Platon, ali mi je istina draza'?",
+  odgovori: ["Sokrat", "Empedokle", "Epikur", "Aristotel"],
+  indeksOdgovora: 3,
 };
 let pitanje9 = {
   tekst: "Da li nije istina da u ovom pitanju nema dvostruke negacije?",
@@ -61,8 +62,8 @@ let pitanje10 = {
   odgovori: ["Da", "Da, ali samo petkom popodne", "Ne", "Paradoks"],
   indeksOdgovora: 1,
 };
-
-let nizPitanja = [
+// CREATE AND SHUFFLE ARRAY=========================================================
+let nizFilozofija = [
   pitanje1,
   pitanje2,
   pitanje3,
@@ -96,44 +97,46 @@ function shuffle(array) {
 
   return array;
 }
-
-shuffle(nizPitanja);
-
-let quizForm = document.getElementById("quiz-form");
-let n = 4;
-for (let j = n; j >= 0; j--) {
-  let div = document.createElement("div");
-  let paragraph = document.createElement("p");
-  quizForm.prepend(div);
-  div.appendChild(paragraph);
-  paragraph.textContent = `${j + 1}. ${nizPitanja[j].tekst}`;
-  for (let i = 0; i < pitanje1.odgovori.length; i++) {
-    let span = document.createElement("span");
-    let inputCreation = document.createElement("input");
-    let radioParagraph = document.createElement("p");
-    inputCreation.name = `answers${j + 1}`;
-    inputCreation.type = "radio";
-    inputCreation.value = nizPitanja[j].odgovori[i];
-    if (i == 0) {
-      inputCreation.checked = true;
-    } else {
-      inputCreation.checked = false;
+shuffle(nizFilozofija);
+let kvizFunkcija = (niz) => {
+  let quizForm = document.getElementById("quiz-form");
+  let n = 4;
+  for (let j = n; j >= 0; j--) {
+    let div = document.createElement("div");
+    let paragraph = document.createElement("p");
+    quizForm.prepend(div);
+    div.appendChild(paragraph);
+    paragraph.textContent = `${j + 1}. ${niz[j].tekst}`;
+    for (let i = 0; i < pitanje1.odgovori.length; i++) {
+      let span = document.createElement("span");
+      let inputCreation = document.createElement("input");
+      let radioParagraph = document.createElement("p");
+      inputCreation.name = `answers${j + 1}`;
+      inputCreation.type = "radio";
+      inputCreation.value = niz[j].odgovori[i];
+      if (i == 0) {
+        inputCreation.checked = true;
+      } else {
+        inputCreation.checked = false;
+      }
+      span.textContent = niz[j].odgovori[i];
+      div.appendChild(radioParagraph);
+      radioParagraph.appendChild(inputCreation);
+      radioParagraph.appendChild(span);
     }
-    span.textContent = nizPitanja[j].odgovori[i];
-    div.appendChild(radioParagraph);
-    radioParagraph.appendChild(inputCreation);
-    radioParagraph.appendChild(span);
   }
-}
+};
+kvizFunkcija(nizFilozofija);
+
+// POSALJI BTN=========================================================================
 
 let posaljiBtn = document.getElementById("posalji-btn");
-
 posaljiBtn.addEventListener("click", () => {
   for (let i = 0; i < 5; i++) {
     let inputRadios = document.getElementsByName(`answers${i + 1}`);
     for (let j = 0; j < 4; j++)
       if (inputRadios[j].checked) {
-        if (j == nizPitanja[i].indeksOdgovora) {
+        if (j == nizFilozofija[i].indeksOdgovora) {
           let tacnoParagraf = document.createElement("p");
           tacnoParagraf.style.color = `green`;
 
@@ -157,8 +160,9 @@ posaljiBtn.addEventListener("click", () => {
   }
 });
 
-let resetBtn = document.getElementById("reset-btn");
+// RESET BTN=======================================================================
 
+let resetBtn = document.getElementById("reset-btn");
 resetBtn.addEventListener("click", () => {
   location.reload();
   window.scrollTo(0, 0);
