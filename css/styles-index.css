@@ -52,6 +52,21 @@ Global Styles
 ===============
 */
 
+@keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .row {
   width: 100%;
   overflow: hidden;
@@ -98,6 +113,7 @@ a:visited {
   border-radius: 20px;
   color: var(--clr-white);
   transition: var(--transition2);
+  animation: show 3s linear 1;
 }
 .box:hover {
   color: var(--clr-grey-1);
