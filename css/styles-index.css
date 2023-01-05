@@ -40,6 +40,7 @@ Variables
   --clr-white: #fff;
   --ff-primary: "Lato", sans-serif;
   --transition: all 3s linear;
+  --transition2: all 0.25s ease-in;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -92,10 +93,11 @@ a:visited {
   text-transform: uppercase;
   border-radius: 20px;
   color: var(--clr-white);
-  transition: var(--transition);
+  transition: var(--transition2);
 }
 .box:hover {
   color: var(--clr-grey-1);
+  transition: var(--transition);
 }
 .header {
   text-align: center;
