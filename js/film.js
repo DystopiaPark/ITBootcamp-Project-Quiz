@@ -99,7 +99,9 @@ function shuffle(array) {
   }
   return array;
 }
+
 shuffle(nizFilm);
+
 let kvizFunkcija = (niz) => {
   let quizForm = document.getElementById("quiz-form");
   let n = 4;
@@ -161,6 +163,7 @@ posaljiBtn.addEventListener("click", () => {
     allInputRadios[z].disabled = true;
   }
   window.scrollTo(0, document.body.scrollHeight);
+  posaljiBtn.style.display = "none";
 });
 
 // RESET BTN=======================================================================

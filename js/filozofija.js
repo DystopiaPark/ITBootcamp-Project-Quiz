@@ -153,6 +153,7 @@ posaljiBtn.addEventListener("click", () => {
     allInputRadios[z].disabled = true;
   }
   window.scrollTo(0, document.body.scrollHeight);
+  posaljiBtn.style.display = "none";
 });
 
 // RESET BTN=======================================================================
