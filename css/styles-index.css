@@ -105,8 +105,8 @@ a:visited {
   height: 200px;
   display: grid;
   place-items: center;
-  background: var(--clr-grey-3);
-  border: 1px solid blue;
+  background: transparent;
+  border: 10px solid blue;
   letter-spacing: 3px;
   font-size: 1.75rem;
   text-transform: uppercase;
@@ -124,14 +124,14 @@ a:visited {
 }
 .header p {
   font-size: 1.2rem;
-  background: var(--clr-grey-3);
+  background: blue;
   padding-bottom: 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 h1 {
   font-size: 2rem;
-  background: var(--clr-grey-3);
+  background: blue;
   padding-top: 1rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -216,5 +216,11 @@ Grid Global
   }
   .box {
     border-radius: 0px;
+    background-color: var(--clr-grey-3);
+    border: 1px solid blue;
+  }
+  .header p,
+  h1 {
+    background: var(--clr-grey-3);
   }
 }
