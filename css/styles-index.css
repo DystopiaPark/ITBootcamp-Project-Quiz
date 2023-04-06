@@ -119,19 +119,25 @@ a:visited {
   color: var(--clr-grey-1);
   transition: var(--transition);
 }
+.box:hover h2 {
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 0.15rem 0.25rem;
+}
 .header {
   text-align: center;
 }
 .header p {
   font-size: 1.2rem;
-  background: rgb(4, 4, 18);
+  background: rgb(77, 212, 225);
   padding-bottom: 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 h1 {
   font-size: 2rem;
-  background: rgb(28, 28, 87);
+  background: rgb(45, 45, 155);
   padding-top: 1rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -139,12 +145,6 @@ h1 {
 .header-title {
   color: var(--clr-grey-10);
   padding: 1rem 0;
-}
-.box:hover h2 {
-  background-color: #fff;
-  opacity: 0.8;
-  border-radius: 5px;
-  padding: 0.15rem 0.25rem;
 }
 
 .filozofija:hover {
