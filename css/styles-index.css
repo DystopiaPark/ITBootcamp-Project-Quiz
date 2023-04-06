@@ -89,7 +89,7 @@ body {
 }
 main {
   height: 100vh;
-  background: url(/slike/question.jpg) no-repeat center/cover;
+  background: url(/slike/quiz.jpeg) no-repeat center/cover;
 }
 ul {
   list-style-type: none;
@@ -106,7 +106,7 @@ a:visited {
   display: grid;
   place-items: center;
   background: transparent;
-  border: 10px solid blue;
+  border: 2px solid blue;
   letter-spacing: 3px;
   font-size: 1.75rem;
   text-transform: uppercase;
@@ -124,14 +124,14 @@ a:visited {
 }
 .header p {
   font-size: 1.2rem;
-  background: blue;
+  background: rgb(4, 4, 18);
   padding-bottom: 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 h1 {
   font-size: 2rem;
-  background: blue;
+  background: rgb(28, 28, 87);
   padding-top: 1rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -139,6 +139,12 @@ h1 {
 .header-title {
   color: var(--clr-grey-10);
   padding: 1rem 0;
+}
+.box:hover h2 {
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 0.15rem 0.25rem;
 }
 
 .filozofija:hover {
